@@ -1,0 +1,26 @@
+From 86fda47eb22f0dd928fdbf2f65f74ed63dbbc86f Mon Sep 17 00:00:00 2001
+From: Isa <hi@f2k1.de>
+Date: Sun, 16 Jul 2023 18:11:46 +0200
+Subject: [PATCH] makefile
+
+---
+ patch_cirrus/Makefile | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/patch_cirrus/Makefile b/patch_cirrus/Makefile
+index 0db13eb..c36ae9b 100644
+--- a/patch_cirrus/Makefile
++++ b/patch_cirrus/Makefile
+@@ -9,8 +9,7 @@ clean:
+ 	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) clean
+ 
+ install:
+-	cp snd-hda-codec-cirrus.ko /lib/modules/$(shell uname -r)/updates/snd-hda-codec-cirrus.ko_speaker
+-	ln -srf /lib/modules/$(shell uname -r)/updates/snd-hda-codec-cirrus.ko_speaker /lib/modules/$(shell uname -r)/updates/snd-hda-codec-cirrus.ko
++	cp snd-hda-codec-cirrus.ko /lib/modules/$(shell uname -r)/updates/snd-hda-codec-cirrus.ko
+ 	depmod -a
+ 	@#uncomment these lines if /etc/pulse/default.pa has been modified with the changes listed in pulse_audio_configs/default.pa
+ 	@#killall alsactl &> /dev/null
+-- 
+2.40.1
+

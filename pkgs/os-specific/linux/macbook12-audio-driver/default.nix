@@ -14,6 +14,8 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = kernel.moduleBuildDependencies;
   makeFlags = kernel.makeFlags;
 
+  patches = [ ./0001-makefile.patch ];
+
   buildPhase = ''
     cd patch_cirrus
     ls ${kernel}/lib
