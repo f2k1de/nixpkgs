@@ -393,6 +393,8 @@ in {
 
     mbp2018-bridge-drv = callPackage ../os-specific/linux/mbp-modules/mbp2018-bridge-drv { };
 
+    macbook12-audio-driver = callPackage ../os-specific/linux/macbook12-audio-driver { };
+
     new-lg4ff = callPackage ../os-specific/linux/new-lg4ff { };
 
     nvidiabl = callPackage ../os-specific/linux/nvidiabl { };
